@@ -78,7 +78,7 @@ export default function Header() {
         {
           id: 11,
           title: "Inducción General Empresa",
-         
+          link: "http://51.222.110.107:3018/servicios/induccion-general",
           submenu: [],
         },
         {
