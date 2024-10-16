@@ -5,18 +5,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: frontend-repository-procesos  # Cambia el nombre de la imagen
+    image: frontend-repository-procesos
     container_name: procesos-docker-nextjs-1
     ports:
       - "3003:3000"
     env_file:
       - .env
-    networks:
-      - my_new_network  # Asegúrate de añadir la red aquí
 
 networks:
   my_new_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.18.0.0/16  # Cambia a una subred no usada
+        - subnet: 172.18.0.0/16  # Cambia a una subred no en uso
