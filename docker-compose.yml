@@ -12,11 +12,12 @@ services:
     env_file:
       - .env
     networks:
-      - my_new_network  # Asocia el servicio con la red
+      my_new_network:
+        ipv4_address: 192.168.240.10  # Puedes elegir una dirección específica si es necesario
 
 networks:
   my_new_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.18.0.0/24 # Asegúrate de usar una subred no en uso
+        - subnet: 192.168.240.0/20  # Ajusta la subred aquí
