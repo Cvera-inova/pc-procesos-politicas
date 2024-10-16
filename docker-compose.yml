@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: frontend-repository-extenciones  # Cambia el nombre de la imagen
-    container_name: extenciones-docker-nextjs-1
+    image: frontend-repository-procesos  # Cambia el nombre de la imagen
+    container_name: procesos-docker-nextjs-1
     ports:
-      - "3002:3000"
+      - "3003:3000"
     env_file:
       - .env
 
