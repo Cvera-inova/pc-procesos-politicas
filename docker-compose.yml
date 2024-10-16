@@ -12,14 +12,11 @@ services:
     env_file:
       - .env
     networks:
-      - my_new_network  # Asigna tu servicio a la red
-
-volumes:
-  node_modules:
+      - my_new_network  # Asegúrate de añadir la red aquí
 
 networks:
   my_new_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.30.0.0/16  # Cambia esto a la subred que quieras usar
+        - subnet: 172.18.0.0/16  # Cambia a una subred no usada
