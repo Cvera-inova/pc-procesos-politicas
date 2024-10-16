@@ -13,11 +13,11 @@ services:
       - .env
     networks:
       my_new_network:
-        ipv4_address: 192.168.250.10  # Asigna una dirección IP dentro de esta subred
+        ipv4_address: 192.169.0.10  # Asigna una dirección IP dentro de esta subred
 
 networks:
   my_new_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.250.0/24  # Ajusta la subred aquí
+        - subnet: 192.169.0.0/24  # Ajusta la subred aquí
